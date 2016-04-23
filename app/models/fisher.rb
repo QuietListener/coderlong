@@ -7,12 +7,14 @@ class Fisher
   Host = "47.88.28.25"
   Timeout = 3
   def self.fish(bait)
+    return -1,{} if bait.blank?
+
     url= BaseUrl + bait;
     url = url.gsub(/\s/,"%20")
     res = FishClient.new(Host).get_result(url)
 
     if res.status !=200
-      return -1,nil
+      return -1,{}
     end
 
 
