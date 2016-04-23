@@ -1,1 +1,59 @@
-<%=@res.inspect%>
+<html>
+<head>
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+
+  <style>
+    .search_box
+    {
+        padding:10px;
+    }
+    .search_input
+    {
+        width:500px;
+    }
+    .search_btn
+    {
+
+    }
+
+    .r_title
+    {
+        color: #609;
+        font-size: 20px;
+    }
+    .tip
+    {
+        font-size: 12px;
+    }
+  </style>
+
+</head>
+<body>
+
+
+<div class="container">
+  <div>
+
+  </div>
+  <div class="col-md-12 search_box">
+    <form>
+      <input name="key" class="search_input" value="<%=@key%>"><button class="search_btn">search</button>
+      <span class="tip">程序要有他的祖国,但代码无国界</span>
+
+    </form>
+  </div>
+  <%if @content and @content["results"] %>
+      <div class="panel-body">
+      <% for result in @content["results"]%>
+          <a href="<%=result["url"]%>" target="_blank" class="r_title"> <%=result["title"].html_safe%></a><br>
+          <%=result["content"].html_safe%><br>
+          <a href="<%=result["formattedUrl"].html_safe %>" target="_blank"> <%=result["formattedUrl"].html_safe %> </a><br>
+          <hr>
+      <% end %>
+      </div>
+  <% end %>
+</div>
+
+</body>
+<html>
