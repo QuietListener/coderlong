@@ -1,0 +1,27 @@
+<style>
+    #loading{position:fixed;_position:absolute;top:50%;left:50%;width:124px;height:124px;overflow:hidden;background:url(http://www.mb-wx.com/skins/Nuvola/loaderc.gif) no-repeat;z-index:7; margin:-62px 0 0 -62px;}
+
+    .cover
+    {
+        position:fixed; top: 0px; right:0px; bottom:0px;filter: alpha(opacity=40); background-color: #fffff0;
+        z-index: 1002; left: 0px; display:none;
+        opacity:0.5; -moz-opacity:0.5;
+    }
+</style>
+<div class="cover" style="display:none;z-index:500;position:fixed">
+  <div id="loading" style="z-index:600" > </div>
+</div>
+<script type="text/javascript">
+
+    function start_loading()
+    {
+        $(".cover").show();
+        $("#loading").show();
+    }
+
+    function stop_loading()
+    {
+        $(".cover").hide();
+        $("#loading").hide();
+    }
+</script>

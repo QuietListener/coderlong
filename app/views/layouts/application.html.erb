@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Coderlong</title>
+  <meta charset="utf-8">
+  <title>码龙搜索:<%=@key%></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+
   <%= csrf_meta_tags %>
+
+  <style>
+    .margin-left-10px{margin-left: 10px}
+  </style>
 </head>
 <body>
 
+
+<%=render :partial => "common/loading" %>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">码龙搜索</a>
+    </div>
+
+    <form class="navbar-form navbar-left" role="search" action="/">
+      <div class="form-group">
+        <input name="key" class="form-control " style="width: 400px"  value="<%=@key%>" placeholder="关键词">
+      </div>
+      <button type="submit" class="btn btn-default">search</button>
+      <span class="tip">程序员有Ta的祖国,但代码没有国界</span>
+    </form>
+  </div>
+</nav>
+
 <%= yield %>
+
+<div class="col-md-12 col-lg-12" style="margin-bottom: 4px">
+  <hr>
+  <p>
+    <span>码龙网©2016</span>
+    <a class="margin-left-10px" href="http://www.miit.gov.cn/">京ICP备13011544号-1</a>
+    <a class="margin-left-10px" href="/about.html">关于码龙网</a>
+  </p>
+</div>
+
+<script>
+  $("button[type='submit']").on("click",function(){
+     start_loading();
+  });
+</script>
 
 </body>
 </html>

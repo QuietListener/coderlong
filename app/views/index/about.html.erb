@@ -1,0 +1,17 @@
+<style>
+  .size_url{width: 400px;}
+</style>
+<div style="margin-top: 70px;min-height: 500px">
+  <div class="container">
+  <div class="jumbotron">
+    <h3>一个程序员的小玩具 enjoy...</h3>
+
+    <p>搜索结果来自如下网站:</p>
+    <%Sites::AllSites.each do |site|%>
+       <label class="size_url" class="site"><%=site%></label>
+    <% end %>
+
+
+  </div>
+  </div>
+</div>

@@ -6,4 +6,8 @@ class IndexController < ApplicationController
     @status, @content = Fisher.fish(@key)
   end
 
+  def about
+
+  end
+
 end
