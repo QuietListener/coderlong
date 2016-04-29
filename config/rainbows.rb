@@ -1,7 +1,7 @@
 # rainbows config
 Rainbows! do
   use :ThreadPool
-  worker_connections 4
+  worker_connections 64
 end
 
 # paths and things
