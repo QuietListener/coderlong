@@ -13,5 +13,11 @@ module Sites
   "iteye.com",
   "zhihu.com",
   "stackoverflow.com",
-  "csdn.com"]
+  "csdn.com",
+  "ruby-china.org",
+  "w3school.com.cn",
+  "w3school.com",
+  "cnodejs.org",
+  "oschina.net"
+  ]
 end
