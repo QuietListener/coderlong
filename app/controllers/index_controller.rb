@@ -10,4 +10,8 @@ class IndexController < ApplicationController
 
   end
 
+  def history
+
+  end
+
 end

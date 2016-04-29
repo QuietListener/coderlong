@@ -58,5 +58,6 @@ Coderlong::Application.routes.draw do
 
   get ""=>"index#home"
   get "/about.html"=>"index#about"
+  get "/history.html"=>"index#history"
 
 end
