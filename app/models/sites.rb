@@ -18,6 +18,23 @@ module Sites
   "w3school.com.cn",
   "w3school.com",
   "cnodejs.org",
-  "oschina.net"
+  "oschina.net",
+  "wikipedia.org",
+  "developer.android.com",
+  "ruby.org",
+  "python.org",
+  "nodejs.org",
+  "developer.apple.com",
+  "docs.oracle.com",
+  "www.cplusplus.com",
+  "tutorialspoint.com",
+  "forum.ubuntu.org.cn",
+  "forums.debian.net",
+  "chinaunix.net",
+  "www.bootcss.com",
+  "angularjs.org",
+  "jquery.com",
+  "jqueryui.com",
+  "coursera.org"
   ]
 end
